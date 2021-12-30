@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,9 +7,15 @@
 <body>
 
 <h1 th:text="${msg}"></h1>
-<a href="/user/add">添加</a>
+<a href="/login">登录</a>
+<a href="/logout">注销</a>
+<div shiro:hasPermission="user:add">
+    <a href="/user/add">添加</a>
+</div>
 <br>
-<a th:href="@{/user/update}">更新</a>
+<div shiro:hasPermission="user:update">
+    <a th:href="@{/user/update}">更新</a>
+</div>
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.tuzhi.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -50,6 +51,8 @@ public class ShiroConfig {
 //        没有授权就跳转
         bean.setUnauthorizedUrl("/unauthorized");
 
+
+
         return bean;
     }
 
@@ -67,6 +70,9 @@ public class ShiroConfig {
         return new UserRealm();
     }
 
-
-
+//    Shiro整合Thymeleaf：ShiroDialect
+    @Bean
+    public ShiroDialect getShiroDialect() {
+        return new ShiroDialect();
+    }
 }

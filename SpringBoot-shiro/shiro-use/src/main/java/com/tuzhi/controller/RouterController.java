@@ -1,5 +1,7 @@
 package com.tuzhi.controller;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,6 +38,14 @@ public class RouterController {
     public String login() {
         System.out.println("进入登录界面");
         return "login";
+    }
+
+    @GetMapping("/logout")
+    public String logout() {
+        System.out.println("======注销======");
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        return "index";
     }
 
     @GetMapping("/unauthorized")
