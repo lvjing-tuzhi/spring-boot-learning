@@ -1,0 +1,15 @@
+[DEBUG][21-12-30][druid.sql.Connection]{conn-10001,procId-185} connected
+[DEBUG][21-12-30][druid.sql.Connection]{conn-10001} pool-connect
+[DEBUG][21-12-30][druid.sql.Statement]{conn-10001, pstmt-20000} created. select *
+        from user where name = ?;
+[DEBUG][21-12-30][druid.sql.Statement]{conn-10001, pstmt-20000} Parameters : [aaa]
+[DEBUG][21-12-30][druid.sql.Statement]{conn-10001, pstmt-20000} Types : [VARCHAR]
+[DEBUG][21-12-30][druid.sql.Statement]{conn-10001, pstmt-20000} executed. 13.0186 millis. select *
+        from user where name = ?;
+[DEBUG][21-12-30][druid.sql.ResultSet]{conn-10001, pstmt-20000, rs-50000} open
+[DEBUG][21-12-30][druid.sql.ResultSet]{conn-10001, pstmt-20000, rs-50000} Header: [id, name, password]
+[DEBUG][21-12-30][druid.sql.ResultSet]{conn-10001, pstmt-20000, rs-50000} Result: [1, aaa, bbb]
+[DEBUG][21-12-30][druid.sql.ResultSet]{conn-10001, pstmt-20000, rs-50000} closed
+[DEBUG][21-12-30][druid.sql.Statement]{conn-10001, pstmt-20000} closed
+[DEBUG][21-12-30][druid.sql.Connection]{conn-10001} pool-recycle
+[DEBUG][21-12-30][druid.sql.Connection]{conn-10001} closed

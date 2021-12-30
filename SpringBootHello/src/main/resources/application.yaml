@@ -1,0 +1,19 @@
+user:
+  userName: "吕竟"
+  age: 18
+server:
+  port: 8081
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8082
+spring:
+  profiles: test
+
+---
+server:
+  port: 8083
+spring:
+  profiles: dev
